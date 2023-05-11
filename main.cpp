@@ -47,3 +47,83 @@ int main() {
   (6, 1, 9, -33, 7, 2, 9, 1, -3, 8, -2, 9, 12, -4) : [7, 2, 9, 1, -3, 8, -2, 9, 12]
   */
   }
+
+
+
+/*
+
+
+#include <iomanip>
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+// Approximate value of golden ratio
+double PHI = 1.6180339;
+
+
+double fibonacciNumber(unsigned int n)
+{
+    int Fp = 0;
+    return Fp = ((pow(1 + sqrt(5),n) - (pow(1 - sqrt(5), n))) / (pow(2,n) * sqrt(5)));
+}
+
+
+int nthNumber(int n, int p)
+{
+    return fibonacciNumber(n) * pow(PHI, n - p);
+}
+
+int nextNumber(int n)
+{
+
+  return  fibonacciNumber( n)* PHI;
+}
+
+// driver code
+int main()
+{
+    unsigned int inputN = 0, inputP = 0;
+
+    cout << "Input a number for the sequence, the number should be a positive whole number " << endl;
+    // the auto checker shouldn't need to be implemented with the use of a unsigned int as it forces the user to put in a positive int regardless
+
+    cin >> inputN;
+
+
+    int FibNumber = fibonacciNumber(inputN);
+    cout << FibNumber << endl;
+    cout << "Input a number for the previous number in sequence, the number should be a positive whole number " << endl;
+
+
+    cin >> inputP;
+
+    for (int i = 0; i < 20; i++)
+    {
+
+        cout << nextNumber(i) << ", ";
+
+    }
+
+    cout << endl << endl;
+    for (int i = 0; i < 20; i++)
+    {
+
+        cout << nthNumber(i, i) << ", ";
+
+    }
+
+
+
+
+
+
+
+
+    return 0;
+}
+
+
+
+*/
