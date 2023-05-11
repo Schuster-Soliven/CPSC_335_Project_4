@@ -52,7 +52,6 @@ int main() {
 
 /*
 
-
 #include <iomanip>
 #include <iostream>
 #include <cmath>
@@ -110,10 +109,13 @@ int main()
     for (int i = 0; i < 20; i++)
     {
 
-        cout << nthNumber(i, i) << ", ";
+        cout << nthNumber(i, i-1) << ", ";
 
     }
 
+    double division = nthNumber(30, 29) / nthNumber(29, 28);
+
+    cout << "The division of fibonacci term 3/2 is: " << division;
 
 
 
