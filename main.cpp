@@ -15,10 +15,33 @@ int main() {
   std::cout << "Answer: " << ans << std::endl;
   /***************************************************************************/
   std::cout << "Part 1B: Golden Ratio Part\n";
+  unsigned int inputN = 0, inputP = 0;
 
+  std::cout << "Input a number for the sequence, the number should be a positive whole number " << std::endl;
+  // the auto checker shouldn't need to be implemented with the use of a unsigned int as it forces the user to put in a positive int regardless
+
+  std::cin >> inputN;
+  int FibNumber = fibonacciNumber(inputN);
+  
+  std::cout << FibNumber << std::endl;
+  std::cout << "Input a number for the previous number in sequence, the number should be a positive whole number " << std::endl;
+  
+  std::cin >> inputP;
+
+  for (int i = 0; i < 20; i++) {
+    std::cout << nextNumber(i) << ", ";
+  }
+
+  std::cout << std::endl << std::endl;
+  for (int i = 0; i < 20; i++) {
+    std::cout << nthNumber(i, i-1) << ", ";
+  }
+  double division = nthNumber(30, 29) / nthNumber(29, 28);
+
+  std::cout << "The division of fibonacci term 3/2 is: " << division;
 
   /***************************************************************************/
-  std::cout << "Part 2: The Largest Sum Subarray Problem\n";
+  std::cout << "\n\nPart 2: The Largest Sum Subarray Problem\n";
   int size = 0;
   std::vector<int> user_vec;
   int values;
@@ -47,85 +70,3 @@ int main() {
   (6, 1, 9, -33, 7, 2, 9, 1, -3, 8, -2, 9, 12, -4) : [7, 2, 9, 1, -3, 8, -2, 9, 12]
   */
   }
-
-
-
-/*
-
-#include <iomanip>
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-// Approximate value of golden ratio
-double PHI = 1.6180339;
-
-
-double fibonacciNumber(unsigned int n)
-{
-    int Fp = 0;
-    return Fp = ((pow(1 + sqrt(5),n) - (pow(1 - sqrt(5), n))) / (pow(2,n) * sqrt(5)));
-}
-
-
-int nthNumber(int n, int p)
-{
-    return fibonacciNumber(n) * pow(PHI, n - p);
-}
-
-int nextNumber(int n)
-{
-
-  return  fibonacciNumber( n)* PHI;
-}
-
-// driver code
-int main()
-{
-    unsigned int inputN = 0, inputP = 0;
-
-    cout << "Input a number for the sequence, the number should be a positive whole number " << endl;
-    // the auto checker shouldn't need to be implemented with the use of a unsigned int as it forces the user to put in a positive int regardless
-
-    cin >> inputN;
-
-
-    int FibNumber = fibonacciNumber(inputN);
-    cout << FibNumber << endl;
-    cout << "Input a number for the previous number in sequence, the number should be a positive whole number " << endl;
-
-
-    cin >> inputP;
-
-    for (int i = 0; i < 20; i++)
-    {
-
-        cout << nextNumber(i) << ", ";
-
-    }
-
-    cout << endl << endl;
-    for (int i = 0; i < 20; i++)
-    {
-
-        cout << nthNumber(i, i-1) << ", ";
-
-    }
-
-    double division = nthNumber(30, 29) / nthNumber(29, 28);
-
-    cout << "The division of fibonacci term 3/2 is: " << division;
-
-
-
-
-
-
-
-    return 0;
-}
-
-
-
-*/
