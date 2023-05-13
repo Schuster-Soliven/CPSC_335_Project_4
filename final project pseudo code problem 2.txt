@@ -1,0 +1,29 @@
+fibonacci_helper(prev, current, n):
+
+	if (n equals one):
+		return previous
+
+	else
+		return fibonacci_helper(current, current+prev, nth-1)
+
+
+	return a false answer
+
+
+global variable of the golden ratio
+
+fibonacciNumber(n):
+	instantiate variable of type int
+
+	return variable equal to equation given in project
+
+
+nthNumber(n, p):
+
+	return fibonacciNumber(n) time the golden ratio to the power of n-p
+
+nextNumber(n):
+
+	return fibonacciNumber(n times golden ratio number)
+
+
